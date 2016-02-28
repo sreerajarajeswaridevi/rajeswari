@@ -1,0 +1,93 @@
+
+.maketextgold{
+  color:	#D5AD6D; /*if no support for background-clip*/
+
+  background: -webkit-linear-gradient(transparent, transparent),
+  -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+  background: -o-linear-gradient(transparent, transparent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.homesection1{
+  #storyhead{
+    @extend .maketextgold;
+    font-size: x-large;
+  }
+  #storyhead4{
+    color: $rr-gold-darker;
+    font-size: medium;
+    //font-weight: lighter !important;
+  }
+}
+
+.contents3col{
+  h3{
+    color: $rr-gold-dark;
+    float: left;
+    text-align: left;
+    font-size: x-large;
+  }
+
+  h4{
+    line-height: 1.5;
+    color: $rr-gold-darker;
+    float: left;
+    text-align: left;
+    //font-weight: normal;
+    font-size: large;
+  }
+
+  }
+
+.carousel-caption{
+  //font-size: large;
+  //font-family: "Segoe UI Light" !important;
+  h5{
+    font-size: small;
+  }
+}
+
+
+//***************************Upadevatas div*********************************************
+.upadevatasdiv{
+  background-color: whitesmoke;
+
+  h3{
+    font-size: x-large;
+    color: $rr-gold-dark;
+  }
+  h4{
+    font-size: large;
+    color: $rr-gold-darker;
+    //font-weight: lighter;
+  }
+
+  .panel{
+    background-color: transparent !important;
+  }
+
+  .panel-body{
+    background-color: transparent !important;
+    i{
+      color:$rr-gold-darker;
+      //font-size: 100px;
+    }
+    h3{
+      font-size: x-large;
+      color: $rr-gold-darker;
+    }
+    hr{
+      border-bottom: 1px solid $rr-gold-dark;
+      width:50%;
+    }
+    p{
+      font-size: large;
+      color:$rr-gold-darker;
+      //font-size: medium;
+      //font-weight: normal;
+    }
+  }
+
+}

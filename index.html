@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html ng-app="rrApp" ng-strict-di>
+<head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/vendor.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mdb.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.2.0/es5-shim.js"></script>
+    <title>Vadakkekunnath Sree RajaRajeswari Devi Temple</title>
+    <link rel="shortcut icon" href="images/title.png" type="image/png">
+
+</head>
+<body layout="row">
+<div class="container-fluid text-center " id="banner">
+    <div class="col-md-2 hidden-sm hidden-xs"></div>
+    <div class="col-md-1 hidden-sm hidden-xs text-center wow fadeInDown"><figure><img class="brand_logo" src="images/lampleft.png" alt="logo"></figure></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-4 text-center wow fadeIn"> <figure><img class="brand_logo" src="images/devicopy.jpg" alt="logo"></figure></div>
+    <div class="col-md-1 hidden-sm hidden-xs text-center wow fadeInDown"><figure><img class="brand_logo" src="images/lampright.png" alt="logo"></figure></div>
+</div>
+<br><br>
+<div class="container text-center">
+    <h5 class="maketextgold bold-700" style="font-family: gramond;">VADAKKEKUNNATHU SREE RAJA RAJESWARI TEMPLE</h5>
+</div>
+<nav id="nav_bar" class="container-fluid navbar navbar-default rrnavbar text-center">
+
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button id="menuButton" type="button" class="navbar-toggle btn-navbar" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--<span id="selectedMenu" class="text-center">aa{{selectedMenuItem}}</span>-->
+            <!--<a id="brand_logo_minimized"  class="navbar-brand hidden" href="#">-->
+                <!--<figure><img class="brand_logo_min" src="images/RR-logo.jpg" alt="logo"></figure>-->
+            <!--</a>-->
+        </div>
+
+    <div id="myNavbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-collapse">
+            <li class="item1" ui-sref="home"><span >HOME</span></li>
+            <li class="item2" ui-sref="events"><span >EVENTS</span></li>
+            <li class="item3" ui-sref="poojas"><span >POOJAS</span></li>
+            <li class="item4" ui-sref="gallery"><span>GALLERY</span></li>
+            <li class="item5" ui-sref="contact"><span>CONTACT</span></li>
+            <li class="item6" ui-sref="yagam"><span>YAGAM</span></li>
+            <hr id="floatingline"/>
+
+        </ul>
+    </div>
+        <div class="container-fluid goldline"></div>
+    </div>
+
+
+
+    </nav>
+
+<div  ui-view></div>
+
+<footer class="page-footer grey center-on-small-only">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-3">
+                <h5 class="white-text">Contact</h5>
+                <hr>
+                <p class="small">Vadakkekunanthu Sree Rajarajeswari Devi Temple</p>
+                <p class="small">Vrindavan Nagar, Kadappakada</p>
+                <p class="small">Kollam 691008, Kerala</p>
+                <a class="small" ui-sref="contact" style="color:white;font-size: small">more</a>
+                <p></p>
+            </div>
+            <div class="col-md-2">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="javascript:void(0)">About</a></li>
+                    <li><a class="grey-text text-lighten-3" data-target="#termsModal" data-toggle="modal">Terms and Conditions</a></li>
+                    <div class="modal fade" id="termsModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Terms and Conditions</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div ng-include="'src/termsandconditions.html'"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <li><a class="grey-text text-lighten-3" data-target="#bugReportModal" data-toggle="modal">Report Bug <i class="material-icons">bug_report</i></a></li>
+                    <div class="modal fade" id="bugReportModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Report bugs</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div ng-include="'src/bugreport.html'"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h5 class="white-text">Navigate</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" ui-sref="yagam">Yagam</a></li>
+                    <li><a class="grey-text text-lighten-3" ui-sref="contacts">People</a></li>
+
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <a href="https://www.facebook.com/Vadakkekunnathu-Sreerajarajeswaridevi-Temple-Kollam-911505548945129/?fref=ts" type="button" class="btn btn-sm btn-primary waves-effect waves-light"><i class="fa fa-facebook"> </i> <span>Facebook</span></a>
+                <!--<a type="button" class="btn  btn-sm  btn-info waves-effect waves-light"><i class="fa fa-twitter"> </i> <span>Twitter</span></a>-->
+                <!--<a type="button" class="btn btn-sm  btn-danger waves-effect waves-light"><i class="fa fa-google-plus"> </i> <span>Google +</span></a>-->
+                <a type="button" href="mailto:test@gaml.com" class="btn btn-sm  btn-default waves-effect waves-light"><i class="fa fa-envelope-o"> </i> <span>Email</span></a>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+    <div class="footer-copyright text-center rgba-black-light">
+        <div class="container-fluid">
+            © 2016 Copyright: <a>Vadakkekunnath Sree Raja Rajeshwari Devi Trust </a>
+        </div>
+    </div>
+</footer>
+
+
+<script type="text/javascript" src="js/vendor.js" defer></script>
+<script type="text/javascript" src="js/mdb.js" defer></script>
+<script type="text/javascript" src="js/app.js" defer></script>
+
+
+</body>
+</html>

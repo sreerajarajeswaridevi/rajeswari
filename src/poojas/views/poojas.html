@@ -1,0 +1,232 @@
+<style>
+    #pooja-div-1{
+        background-image: url(images/poojas/p7.jpg);
+        min-height: 600px;
+        max-width: 100%;
+    }
+    #pooja-div-2{
+        min-height: 400px;
+        max-width: 100%;
+        border-bottom: 1px solid lightgrey;
+    }
+    #pooja-div-3{
+        min-height: 400px;
+        max-width: 100%;
+        border-bottom: 1px solid lightgrey;
+    }
+    #pooja-div-4{
+        min-height: 400px;
+        max-width: 100%;
+        border-bottom: 1px solid lightgrey;
+    }
+    #pooja-div-5{
+        min-height: 400px;
+        max-width: 100%;
+        border-bottom: 1px solid lightgrey;
+    }
+    #pooja-div-6{
+        min-height: 400px;
+        max-width: 100%;
+        border-bottom: 1px solid lightgrey;
+    }
+    #pooja-div-7{
+        background-image: url(images/poojas/p6.jpg);
+        min-height: 400px;
+        max-width: 100%;
+        }
+
+    .whitebg{
+        overflow: hidden;
+        padding: 20px 20px 10px;
+        position: relative;
+        z-index: 5;
+        background-color: #fff;
+        background-image: url(images/poojas/p6-blur.jpg);
+        box-shadow: 2px 2px 9px 0 rgba(0,0,0,.5);
+    }
+    .whitebg::before {
+        bottom: -10px;
+        display: block;
+        left: -10px;
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        z-index: -1;
+        background: inherit;
+        /*-webkit-filter: blur(2px);*/
+    }
+    @media (max-width: 768px) {
+        #pooja-div-2{
+            background-image: url(images/poojas/p1.jpg);
+            background-size: 250px 250px;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 250px !important;
+            max-width: 100%;
+        }
+        #pooja-div-3{
+            background-image: url(images/poojas/p2.png);
+            background-size: 250px 250px;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 250px !important;
+            max-width: 100%;
+        }
+        #pooja-div-4{
+            background-image: url(images/poojas/p3.jpg);
+            background-size: 250px 250px;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 250px !important;
+            max-width: 100%;
+        }
+        #pooja-div-5{
+            background-image: url(images/poojas/p4.png);
+            background-size: 250px 250px;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 250px !important;
+            max-width: 100%;
+        }
+        #pooja-div-6{
+            background-image: url(images/poojas/p5.jpg);
+            background-size: 250px 250px;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 250px !important;
+            max-width: 100%;
+        }
+    }
+</style>
+
+<section>
+    <div class="container text-center main-events">
+        <br>
+
+        <h5 class="event-head ">A SNAPSHOT OF THE MOST IMPORTANT POOJAS HELD HERE</h5>
+
+        <div class="col-md-3 wow fadeInUp" ng-repeat="pooja in poojas" >
+            <!--Image Card-->
+            <div class="card hoverable" ng-click="scrollToDiv($index)" style="height:260px;">
+                <div class="card-image">
+                    <div class="view overlay hm-orange-light z-depth-1" style="height: 160px;">
+                        <img ng-src={{pooja.imgSrc}} class="img-responsive" alt="" >
+                        <div class="mask waves-effect"></div>
+                    </div>
+                    <!--<span class="card-title">{{event.header}}</span>-->
+                </div>
+                <div class="card-content">
+                    <p>{{pooja.header}}</p>
+                </div>
+                <!--<div class="card-action">-->
+                <!--<a>This is a link</a>-->
+                <!--</div>-->
+            </div>
+            <!--Image Card-->
+        </div>
+    </div>
+    <section class="parallax wow fadeInUp" id="pooja-div-1">
+        <div class="parallax-content container-fluid text-center">
+            <h3>{{poojas[0].header}}</h3>
+            <hr>
+            <div class="container">
+                <h5>{{poojas[0].content}}</h5>
+            </div>
+            <br><br>
+            <!--<button style="color: black;" type="button" class="btn btn-link">Read More</button>-->
+        </div>
+    </section>
+    <section id="pooja-div-2">
+        <div class="container">
+            <div class="wow fadeInUp container col-md-4 hidden-sm hidden-xs text-center">
+                <img style="margin-left: 100px; height: 300px;" ng-src="{{poojas[1].imgSrc}}" alt="poojas">
+            </div>
+            <div class="col-md-8 col-sm-12 col-xs-12 container text-center transparent-back-white">
+                <br><br>
+                <h4 class="maketextgold">{{poojas[1].header}}</h4>
+                <hr>
+                <h5 class="blackText">{{poojas[1].content}}</h5>
+
+                <br><br>
+            </div>
+        </div>
+    </section>
+    <section id="pooja-div-3">
+        <div class="container">
+            <div class="col-md-8 col-sm-12 col-xs-12 container text-center transparent-back-white">
+                <br><br>
+                <h4 class="maketextgold">{{poojas[2].header}}</h4>
+                <hr>
+                <h5 class="blackText">{{poojas[2].content}}</h5>
+
+                <br><br>
+                <!--<button style="color: black;" type="button" class="btn btn-link">Read More</button>-->
+            </div>
+            <div class="wow fadeInUp container col-md-4 hidden-sm hidden-xs text-center">
+                <img style="margin-top: 10%;margin-right: 200px; height: 200px;" ng-src="{{poojas[2].imgSrc}}" alt="poojas">
+            </div>
+        </div>
+
+    </section>
+    <section id="pooja-div-4">
+        <div class="container">
+            <div class="wow fadeInUp container col-md-4 hidden-sm hidden-xs text-center">
+                <img style="margin-left: 100px; height: 300px;" ng-src="{{poojas[3].imgSrc}}" alt="poojas">
+            </div>
+            <div class="col-md-8 col-sm-12 col-xs-12 container text-center transparent-back-white">
+                <br><br>
+                <h4 class="maketextgold">{{poojas[3].header}}</h4>
+                <hr>
+                <h5 class="blackText">{{poojas[3].content}}</h5>
+
+                <br><br>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="pooja-div-5">
+        <div class="container">
+            <div class="col-md-8 col-sm-12 col-xs-12 container text-center transparent-back-white">
+                <br><br>
+                <h4 class="maketextgold">{{poojas[4].header}}</h4>
+                <hr>
+                <h5 class="blackText">{{poojas[4].content}}</h5>
+
+                <br><br>
+                <!--<button style="color: black;" type="button" class="btn btn-link">Read More</button>-->
+            </div>
+            <div class="wow fadeInUp container col-md-4 hidden-sm hidden-xs text-center">
+                <img style="margin-top: 10%;margin-right: 200px; height: 200px;" ng-src="{{poojas[4].imgSrc}}" alt="poojas">
+            </div>
+        </div>
+
+    </section>
+    <section id="pooja-div-6">
+        <div class="container">
+            <div class="wow fadeInUp container col-md-4 hidden-sm hidden-xs text-center">
+                <img style="margin-left: 100px; height: 300px;" ng-src="{{poojas[5].imgSrc}}" alt="poojas">
+            </div>
+            <div class="col-md-8 col-sm-12 col-xs-12 container text-center transparent-back-white">
+                <br><br>
+                <h4 class="maketextgold">{{poojas[5].header}}</h4>
+                <hr>
+                <h5 class="blackText">{{poojas[5].content}}</h5>
+
+                <br><br>
+            </div>
+        </div>
+    </section>
+
+    <section class="parallax wow fadeInUp" id="pooja-div-7">
+        <div class="container text-center whitebg">
+            <h4 class="whiteText">{{poojas[6].header}}</h4>
+            <hr>
+            <div class="container">
+                <p class="whiteText">{{poojas[6].content}}</p>
+            </div>
+            <br><br>
+            <!--<button style="color: black;" type="button" class="btn btn-link">Read More</button>-->
+        </div>
+    </section>
+</section>
