@@ -1,0 +1,345 @@
+.maketextgold, .homesection1 #storyhead, .main-events .event-head {
+  color: #D5AD6D;
+  /*if no support for background-clip*/
+  background: -webkit-linear-gradient(transparent, transparent), -webkit-linear-gradient(top, #d5ad6d 0%, #d5ad6d 26%, #e2ba78 35%, #a37e43 45%, #91703b 61%, #d5ad6d 100%);
+  background: -o-linear-gradient(transparent, transparent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.homesection1 #storyhead {
+  font-size: x-large;
+}
+.homesection1 #storyhead4 {
+  color: #926318;
+  font-size: medium;
+}
+
+.contents3col h3 {
+  color: darkgoldenrod;
+  float: left;
+  text-align: left;
+  font-size: x-large;
+}
+.contents3col h4 {
+  line-height: 1.5;
+  color: #926318;
+  float: left;
+  text-align: left;
+  font-size: large;
+}
+
+.carousel-caption h5 {
+  font-size: small;
+}
+
+.upadevatasdiv {
+  background-color: whitesmoke;
+}
+.upadevatasdiv h3 {
+  font-size: x-large;
+  color: darkgoldenrod;
+}
+.upadevatasdiv h4 {
+  font-size: large;
+  color: #926318;
+}
+.upadevatasdiv .panel {
+  background-color: transparent !important;
+}
+.upadevatasdiv .panel-body {
+  background-color: transparent !important;
+}
+.upadevatasdiv .panel-body i {
+  color: #926318;
+}
+.upadevatasdiv .panel-body h3 {
+  font-size: x-large;
+  color: #926318;
+}
+.upadevatasdiv .panel-body hr {
+  border-bottom: 1px solid darkgoldenrod;
+  width: 50%;
+}
+.upadevatasdiv .panel-body p {
+  font-size: large;
+  color: #926318;
+}
+
+.maindiv {
+  height: 200px;
+  width: 900px;
+  background-color: goldenrod;
+  border: 1px dotted gray;
+  border-radius: 5px;
+}
+
+html, body {
+  height: auto;
+}
+
+.whiteText {
+  color: white;
+}
+
+.blackText {
+  color: black;
+}
+
+#body_div {
+  height: 200px;
+  background-color: transparent;
+  margin-top: 30px;
+}
+
+#banner {
+  width: 100%;
+  height: 200px;
+}
+
+.brand_logo {
+  height: 200px;
+}
+
+.brand_logo_min {
+  height: 50px;
+  position: absolute;
+}
+
+#brand_logo_minimized {
+  transition: .3s ease-in-out;
+}
+
+.nav_links {
+  margin: 0;
+}
+
+.nav_links li {
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.nav_links li a {
+  padding: 0 15.5px;
+  color: #3498db;
+  text-decoration: none;
+}
+
+#menuButton {
+  border: 1px solid goldenrod;
+  background-color: transparent;
+}
+#menuButton span {
+  background-color: darkgoldenrod;
+}
+
+#menuButton:hover {
+  background-color: gold;
+}
+
+.modal-footer button {
+  background-color: darkgoldenrod;
+  color: White;
+}
+
+.modal-footer button:hover {
+  background-color: goldenrod !important;
+  color: White;
+}
+
+.rrnavbar {
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  border: transparent;
+  transition: .3s ease-in-out;
+}
+.rrnavbar ul li {
+  display: inline;
+  text-align: center;
+  cursor: pointer;
+}
+.rrnavbar ul li span {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: darkgoldenrod;
+  display: inline-block;
+  width: 10%;
+  padding: .75rem 0;
+  margin: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+.rrnavbar #floatingline {
+  height: .25rem;
+  width: 10%;
+  margin: 0;
+  background: goldenrod;
+  border: none;
+  transition: .3s ease-in-out;
+  margin-left: 20%;
+}
+
+.rrnavbar-fixed {
+  top: 0;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  #floatingline {
+    visibility: visible !important;
+  }
+
+  #selectedMenu {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: darkgoldenrod;
+    display: inline-block;
+    width: 10%;
+    padding: .75rem 0;
+    margin: 0;
+    text-decoration: none;
+    visibility: hidden !important;
+  }
+}
+#menuButton {
+  color: gold;
+}
+
+@media (max-width: 768px) {
+  #floatingline {
+    visibility: hidden !important;
+  }
+
+  .rrnavbar ul li {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .docs-pictures > li {
+    width: 50% !important;
+    border: 1px solid transparent;
+    overflow: hidden;
+  }
+}
+#selectedMenu {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: darkgoldenrod;
+  display: inline-block;
+  width: 10%;
+  padding: .75rem 0;
+  margin: 0;
+  text-decoration: none;
+  visibility: visible;
+}
+
+.rr-margin-left-20, .item1:hover ~ #floatingline {
+  margin-left: 20% !important;
+}
+
+.rr-margin-left-30, .item2:hover ~ #floatingline {
+  margin-left: 30% !important;
+}
+
+.rr-margin-left-40, .item3:hover ~ #floatingline {
+  margin-left: 40% !important;
+}
+
+.rr-margin-left-50, .item4:hover ~ #floatingline {
+  margin-left: 50% !important;
+}
+
+.rr-margin-left-60, .item5:hover ~ #floatingline {
+  margin-left: 60% !important;
+}
+
+.rr-margin-left-70, .item6:hover ~ #floatingline {
+  margin-left: 70% !important;
+}
+
+.goldline {
+  height: 1px;
+  width: 100%;
+  background-color: goldenrod;
+}
+
+.page-footer .btn {
+  width: 150px;
+}
+
+.main-events .event-head {
+  font-size: x-large;
+}
+
+/* Content */
+/***********************************VIEWER JS pictures CSS start***********************************/
+.clearfix {
+  width: 100%;
+}
+
+.docs-pictures {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.docs-pictures > li {
+  float: left;
+  width: 25%;
+  height: 33.3%;
+  margin: 0 -1px -1px 0;
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+
+.docs-pictures > li > img {
+  width: 100%;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.docs-toggles > .btn,
+.docs-toggles > .btn-group {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 992px) {
+  .docs-collapse {
+    display: block;
+  }
+}
+.docs-buttons > .btn-group,
+.docs-buttons > .input-group {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.docs-buttons .input-group-btn {
+  width: 50%;
+}
+
+.docs-buttons .input-group-btn .btn {
+  width: 100%;
+}
+
+/***********************************VIEWER JS pictures CSS end***********************************/
+.parallax .parallax-content {
+  background-color: transparent;
+  text-shadow: 2px 2px black;
+  opacity: 0.8;
+}
+.parallax .parallax-content h3 {
+  color: white;
+}
+.parallax .parallax-content h5 {
+  color: white;
+}
+
+.transparent-back-white {
+  background-color: white;
+  opacity: 0.8;
+}

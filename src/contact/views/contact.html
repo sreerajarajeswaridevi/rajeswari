@@ -1,0 +1,93 @@
+<style>
+    #map {
+        width: 500px;
+        height: 400px;
+    }
+    .people-div{
+        background-color: whitesmoke;
+    }
+    address p{
+        line-height: 1;
+    }
+
+    .rr-name{
+        font-size: large;
+        font-weight: 400;
+    }
+    .rr-desc{
+        font-size: medium;
+    }
+    .rr-subdesc{
+        font-size: small;
+        color:darkgrey;
+    }
+    .rr-phone{
+        color:grey;
+    }
+    #c-ruler{
+        visibility: collapse;
+    }
+    @media (max-width: 768px) {
+        #c-ruler{
+            visibility: visible;
+            border-bottom: 1px solid lightgrey;
+        }
+    }
+    .people-div p{
+        line-height: 1.2;
+    }
+</style>
+<div>
+
+    <div class="container text-center">
+        <div class="row">
+            <br>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <h4 class="maketextgold">Address</h4>
+                <hr>
+                <address>
+                    <div><i class="maketextgold material-icons">place</i></div>
+                    <p><b>Vadakkekunanthu Sree Rajarajeswari Devi Temple</b></p>
+                    <p>Vrindavan Nagar, Kadappakada</p>
+                    <p style="color:gray">Kollam 691008</p>
+                    <p style="color:gray">Kerala, India</p>
+                    <br>
+                    <i class="maketextgold material-icons">phone</i>
+                    <p >Office</p>
+                    <a href="tel:9447894916" style="font-size: medium;">9447894916</a>
+                    <br>
+                    <a href="tel:04742766667" style="font-size: medium;">0474 2766667</a>
+                    <hr>
+                    <span style="font-size: small">Governing body :<br>Kollam Kadappakkada Vadakkekunnathu <br>Sree Rajarajeswari Devi Temple Trust</span>
+                </address>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <h5 class="maketextgold">Directions to temple</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.8202006123133!2d76.60282731478561!3d8.896302293612974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05fcfc97ace973%3A0xfecce50fba421b59!2sVadakkekunnath+Sree+Raja+Rajeshwari+Kshethram%2C+Kadapakkada%2C+Kollam%2C+Kerala+691008!5e0!3m2!1sen!2sin!4v1455882498368" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <br>
+
+    </div>
+    <div class="people-div row">
+        <div class="container-fluid text-center">
+            <h4 class="maketextgold" style="font-size: x-large;font-weight: 400;">The office bearers of the Trust</h4>
+            <hr>
+            <div class="col-md-1 col-lg-1"></div>
+            <div ng-repeat="contact in contacts" class="text-center col-xs-12 col-sm-6 col-md-2 col-lg-2 wow fadeInUp">
+                    <div class=" img-circle waves-effect waves-orange" style="border:1px solid goldenrod">
+                        <img ng-src="{{contact.imgSrc}}" class="img-circle" alt="" height="100px" width="100px">
+                    </div>
+                <br><br>
+                    <p class="rr-name">{{contact.name}}</p>
+                    <p class="rr-desc">{{contact.desc}}</p>
+                    <p class="rr-subdesc">{{contact.subDesc}}</p>
+                    <i class="maketextgold material-icons">phone</i><br>
+                    <a class="rr-phone" href="tel:{{contact.ph}}">{{contact.ph}}</a>
+                <br>
+                <hr id="c-ruler">
+            </div>
+        </div>
+        <br>
+    </div>
+</div>

@@ -1,0 +1,269 @@
+<style>
+    .yagam-div-1{
+        min-height: 400px;
+        background-image: url('images/yagam/yagam1.jpg');
+    }
+    .yagam-div-1 h4,p{
+        color:white;
+        /*margin-top: 5%;*/
+        font-weight: 400;
+    }
+    .date-box{
+        height: 100px;
+        width: 100px;
+        border-radius:5px;
+        background-color: dodgerblue;
+    }
+    .date-box{
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    .date-box p{
+        display: block;
+        position: relative;
+    }
+    address span{
+        color:black;
+        line-height: 1;
+    }
+    .yagam-div-3{
+        min-height: 400px;
+        background-color: whitesmoke;
+    }
+    .yagam-people-div span{
+        color:black;
+    }
+    .yagam-people-div img{
+        border:2px solid darkgoldenrod;
+    }
+    .yagam-people-div .subhead{
+        color:darkgray;
+    }
+    .yagam-people-div .head{
+        font-size:large;
+        font-weight: 300;
+        color:black;
+    }
+    #yagamModal h5{
+        color:black;
+    }
+    #yagamModal p{
+        color:black;
+        font-size:medium;
+    }
+
+    #yagamCarousel, #rrCarousel{
+        min-height:300px;
+    }
+    .carousel .carousel-indicators .active{
+        background-color: darkgray !important;
+    }
+    .pulldown{
+        margin-top: 100px;
+        width: 100%;
+        height: 100%;
+    }
+    .carousel-image{
+        height: 300px;
+    }
+    .carousel-caption{
+        float: right;
+        margin-left: 30%;
+        right: 0;
+        width: 500px;
+    }
+
+    @media (max-width: 768px) {
+        .pulldown{
+            margin-top: 50%;
+            width: 100%;
+            height: 100%;
+        }
+        .carousel-caption{
+            float: left !important;
+            left: 0;
+            right: 0;
+            margin: auto !important;
+            width: auto !important;
+        }
+        .carousel-caption p , .carousel-caption h4{
+            color:white !important;
+        }
+        .carousel-image{
+            -webkit-filter: brightness(30%);
+            filter: brightness(30%);
+        }
+    }
+</style>
+
+<div class="container-fluid yagam-div-1 wow slideInUp">
+    <div class="container text-center ">
+        <h4>SREE  MAHAGAYATHREE YAGAM</h4>
+        <span style="color:lightgrey;font-size: small;">Conducted By Vadakkekunnathu Sree Raja Rajeswari Devi Trust</span><br>
+        <span style="color:lightgrey;font-size: small;">On behalf of, Sree Mookambika Mission Charitable Trust, India</span>
+        <p style="text-shadow: 2px 2px black;">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
+        <button type="button" class="btn btn-primary" data-target="#yagamModal" data-toggle="modal" style="color: white;">Read More</button>
+    </div>
+    <div class="modal fade" id="yagamModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h5 class="modal-title">SREE  MAHAGAYATHREE YAGAM</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid yagam-div-2 wow slideInUp">
+    <div class="container text-center">
+
+        <div class="row text-center">
+            <div class="container">
+                <div class="col-md-4" style="margin-top:30px;">
+                    <p class="maketextgold">Venue</p>
+                    <address>
+                        <span><b>Vadakkekunanthu Sree Rajarajeswari Devi Temple</b></span><br>
+                        <span>Vrindavan Nagar, Kadappakada</span><br>
+                        <span style="color:gray">Kollam 691008</span><br>
+                        <span style="color:gray">Kerala, India</span><br>
+                        <span>click <a ui-sref="contact">here</a> for more contact info</span>
+                    </address>
+                </div>
+                <h5>Dates</h5>
+                <hr>
+                <div ng-repeat="date in yagamDates" style="margin:2%" class="text-center col-xs-12 col-sm-1 col-md-1 col-lg-1">
+                    <div class="date-box container text-center wow fadeInUp hoverable">
+                        <div class="container text-center">
+                            <span>April</span>
+                            <span style="font-size: 40px;">{{date}}</span>
+                            <span>2016</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="yagamCarousel" class="carousel slide carousel-fade hoverable"   data-ride="carousel" >
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#yagamCarousel" style="border:1px solid grey" data-slide-to="{{$index}}" ng-class="{'active' : $index == 0}" ng-repeat="announcement in announcements"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div id="rrCarousel" class="carousel-inner  z-depth-2" role="listbox">
+            <div class="item" ng-repeat="announcement in announcements" ng-class=" $index == 0 ? 'active' : ''" >
+                <div class="view">
+                    <a><img class="carousel-image" ng-src="{{announcement.imgSrc}}" class="img-responsive pulldown" alt="slide1">
+                        <div class="mask waves-effect waves-light"></div>
+                    </a>
+                    <div class="carousel-caption">
+                        <div class="animated fadeInUp">
+                            <h4 class="blackText">{{announcement.head}}</h4>
+                            <p style="color:slategray; text-shadow: none;">{{announcement.desc}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control new-control wow fadeInLeft" role="button" data-slide="prev">
+        <span class="fa fa fa-angle-left waves-effect waves-light"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control new-control  wow fadeInRight" role="button" data-slide="next">
+        <span class="fa fa fa-angle-right waves-effect waves-light"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+
+
+<div class="container-fluid yagam-div-3">
+    <div class="container text-center">
+        <h4 class="blackText" style="font-weight: 300;">Important People</h4>
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-xs-12 text-center yagam-people-div">
+                <img style="height: 150px;width: 150px;" src="images/yagam/dp1.jpg" class="img-circle  hoverable waves-effect waves-orange">
+                <br>
+                <span class="head">JagathGuru Sri Sri Sri Jayendrapuri swami</span><br>
+                <span class="subhead">kailasapeedam peedathipathy</span><br>
+                <span class="subhead">Sree Rajarajeswari nagar, Bangalore</span>
+            </div>
+
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12">
+            </div>
+            <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12 text-center yagam-people-div">
+                <h5>Yagacharyan</h5>
+                <img style="height: 150px;width: 150px;" src="images/yagam/dp2.jpg" class="img-circle  hoverable waves-effect waves-orange">
+                <br>
+                <span class="head">Sri Advaidananthapuri Swami</span><br>
+                <span class="subhead">Jagath Guru Shishyan</span><br>
+                <span class="subhead">kailasapeedam Sree Rajarajeswari nagar, Bangalore</span>
+            </div>
+            <div class="col-md-3 col-lg-3 col-xs-12 col-sm-12 text-center yagam-people-div">
+                <h5>MarggaDarshi</h5>
+                <img style="height: 150px;width: 150px;" src="images/yagam/dp3.jpg" class="img-circle  hoverable waves-effect waves-orange">
+                <br>
+                <span class="head">Sri Manjunatha Adiga</span><br>
+                <span class="subhead">Former Priest</span><br>
+                <span class="subhead">Kollur Sri Mookambika Temple</span>
+            </div>
+
+        </div>
+        <br><br>
+        <div class="row">
+            <!--<div class="col-md-2 col-lg-3 col-xs-1 col-sm-1">-->
+            <!--</div>-->
+            <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 text-center yagam-people-div">
+                <h5>Trust Owner</h5>
+                <img style="height: 150px;width: 150px;" src="images/yagam/dp4.jpg" class="img-circle hoverable waves-effect waves-orange">
+                <br>
+                <span class="head">Makam Nal KeralaVarma Raja</span><br>
+                <span class="subhead">Valiyakoyikkal Palace</span><br>
+                <span class="subhead">Panthalam</span>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 text-center yagam-people-div">
+                <h5>Yagam yajaman/yajamanapathni</h5>
+                <img style="height: 150px;width: 230px; border-radius: 5px;" src="images/yagam/dp6.jpg" class=" hoverable waves-effect waves-orange">
+                <br>
+                <span class="head">Sri. Nityanantha Adiga</span><br>
+                <span class="head">Wife, Smt. Rakshitha Adiga</span><br>
+                <span class="subhead">Head Priest</span><br>
+                <span class="subhead">Kollur Sri Mookambika Temple</span>
+            </div>
+            <div class="col-md-4 col-lg-4 col-xs-12 col-sm-12 text-center yagam-people-div">
+                <h5>Trust Acharya</h5>
+                <img style="height: 150px;width: 150px;" src="images/yagam/dp5.jpg" class="img-circle  hoverable waves-effect waves-orange">
+                <br>
+                <span class="head">Sri Mookambika SajiPotti</span><br>
+                <span class="subhead">Philanthropist</span><br>
+            </div>
+        </div>
+        <br><br><br>
+    </div>
+</div>
